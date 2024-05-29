@@ -1,4 +1,5 @@
 #include "dotmatrix.h"
+#include <string.h>
 
 extern SPI_HandleTypeDef hspi2;
 void dotmatrix_main_test();
@@ -200,7 +201,7 @@ void init_dotmatrix(void)
 {
 	for (int i=0; i < 8; i++)
 	{
-		display_data[i] = number_data[i];
+		display_data[i] = number_data[i][0];
 	}
 	for (int i=1; i < number_of_character+1; i++)
 	{
